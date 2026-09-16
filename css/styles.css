@@ -1,0 +1,361 @@
+/* ==================================================================
+   JGR SOLUCIONES CONTABLES Y TRIBUTARIAS — HOJA DE ESTILOS
+   ------------------------------------------------------------------
+   Índice del archivo:
+   1. Variables de color y reset general
+   2. Tipografía general
+   3. Menú superior (header / navbar)
+   4. Hero / portada
+   5. Sección "Quiénes somos"
+   6. Sección "¿Por qué elegirnos?"
+   7. Sección "Servicios"
+   8. Sección "Sectores que atendemos"
+   9. Sección "Cobertura nacional"
+   10. Sección "Contacto" + formulario
+   11. Pie de página (footer)
+   12. Burbuja de WhatsApp
+   13. Responsive (celular / tablet)
+
+   CÓMO CAMBIAR LOS COLORES:
+   Solo hay que editar los valores dentro de :root en la sección 1.
+   Todo el sitio usa esas variables, así que cambiando un color ahí
+   se actualiza en toda la página automáticamente.
+   ================================================================== */
+
+
+/* ------------------------------------------------------------------
+   1. VARIABLES DE COLOR Y RESET GENERAL
+   ------------------------------------------------------------------ */
+:root{
+  --rojo:#7a4040;          /* Rojo principal de la marca (ajustado por el cliente) */
+  --rojo-oscuro:#9E1620;   /* Rojo para estados "hover" (al pasar el mouse) */
+  --negro:#433b3b;         /* Negro/casi negro usado en fondos oscuros y textos (ajustado por el cliente) */
+  --gris-panel:#2B2B2E;    /* Gris oscuro auxiliar */
+  --gris-claro:#F4F3F1;    /* Fondo gris claro para alternar secciones */
+  --gris-medio:#6B6B6E;    /* Gris para texto secundario/párrafos */
+  --blanco:#FFFFFF;
+  --linea:#E4E2DE;         /* Color de bordes/divisores sutiles */
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; } /* hace que los links del menú bajen con animación suave */
+
+body{
+  font-family:'Work Sans', sans-serif;
+  color:var(--negro);
+  background:var(--blanco);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+h1,h2,h3,h4{
+  font-family:'Archivo', sans-serif;
+  line-height:1.15;
+  letter-spacing:-0.01em;
+}
+
+a{ color:inherit; text-decoration:none; }
+img{ max-width:100%; display:block; }
+
+/* Contenedor centrado que usan casi todas las secciones */
+.wrap{ max-width:1180px; margin:0 auto; padding:0 24px; }
+
+
+/* ------------------------------------------------------------------
+   3. MENÚ SUPERIOR (HEADER / NAVBAR)
+   ------------------------------------------------------------------ */
+header{
+  position:sticky; top:0; z-index:100; /* se queda fijo arriba al hacer scroll */
+  background:#7a4040; /* fondo sólido en rojo (pedido por el cliente) */
+  backdrop-filter:blur(6px);
+}
+.navbar{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 24px; max-width:1180px; margin:0 auto;
+}
+.logo{
+  display:flex; align-items:center; gap:10px;
+  color:var(--blanco); font-weight:900; font-size:1.5rem;
+}
+.logo span{ color:var(--rojo); } /* la "R" de JGR en rojo */
+.logo small{
+  display:block; font-family:'Work Sans',sans-serif; font-weight:500;
+  font-size:0.55rem; letter-spacing:0.08em; color:#B9B9BC; margin-top:-2px;
+}
+nav ul{ display:flex; gap:30px; list-style:none; }
+nav a{ color:#E7E7E9; font-size:0.92rem; font-weight:500; transition:color .2s; }
+nav a:hover{ color:var(--rojo); }
+
+/* Botón hamburguesa (solo visible en celular, ver sección responsive) */
+.nav-toggle{ display:none; background:none; border:none; cursor:pointer; }
+.nav-toggle span, .nav-toggle span::before, .nav-toggle span::after{
+  content:""; display:block; width:24px; height:2px; background:#fff;
+  position:relative; transition:.2s;
+}
+.nav-toggle span::before{ position:absolute; top:-8px; }
+.nav-toggle span::after{ position:absolute; top:8px; }
+
+
+/* ------------------------------------------------------------------
+   4. HERO / PORTADA
+   ------------------------------------------------------------------ */
+.hero{
+  background:var(--negro);
+  color:var(--blanco);
+  position:relative;
+  overflow:hidden;
+  padding:70px 0 0;
+}
+/* Círculo rojo difuminado decorativo en la esquina */
+.hero::before{
+  content:"";
+  position:absolute; top:-140px; right:-160px;
+  width:480px; height:480px; border-radius:50%;
+  background:radial-gradient(circle, rgba(200,32,46,0.35), transparent 70%);
+}
+.hero-inner{
+  display:grid; grid-template-columns:1.1fr 0.9fr; gap:40px; align-items:center;
+  position:relative; z-index:2;
+}
+.eyebrow-line{
+  display:flex; align-items:center; gap:10px; margin-bottom:18px;
+  color:#D6D6D8; font-size:0.85rem; font-weight:500;
+}
+.eyebrow-line .dot{ width:8px; height:8px; border-radius:50%; background:var(--rojo); }
+.hero h1{ font-size:2.7rem; font-weight:800; color:var(--blanco); margin-bottom:20px; }
+.hero h1 em{ font-style:normal; color:#f65e68; } /* color especial para "seguridad y salud en el trabajo" (pedido por el cliente) */
+.hero p.lead{ font-size:1.08rem; color:#C9C9CC; max-width:480px; margin-bottom:32px; }
+
+.btn-row{ display:flex; gap:14px; flex-wrap:wrap; }
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:14px 26px; border-radius:4px; font-weight:600; font-size:0.95rem;
+  cursor:pointer; border:2px solid transparent; transition:.2s;
+}
+.btn-primary{ background:var(--rojo); color:#fff; }
+.btn-primary:hover{ background:var(--rojo-oscuro); }
+.btn-outline{ border-color:#55555A; color:#fff; }
+.btn-outline:hover{ border-color:var(--rojo); color:var(--rojo); }
+
+.hero-figure{ position:relative; border-radius:6px; overflow:hidden; border:1px solid #38383C; }
+.hero-figure img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+/* Franja roja con los 4 servicios (Contabilidad, Administración, Gestión Humana, SST) */
+.service-strip{ background:var(--rojo); margin-top:60px; }
+.service-strip .wrap{ display:grid; grid-template-columns:repeat(4,1fr); }
+.service-strip a{
+  display:flex; flex-direction:column; align-items:center; gap:8px;
+  padding:20px 10px; color:#fff; font-weight:600; font-size:0.92rem;
+  border-right:1px solid rgba(255,255,255,0.25);
+  text-align:center; transition:background .2s;
+}
+.service-strip a:last-child{ border-right:none; }
+.service-strip a:hover{ background:var(--rojo-oscuro); }
+.service-strip svg{ width:26px; height:26px; }
+
+
+/* ------------------------------------------------------------------
+   ESTILOS GENERALES DE SECCIÓN (usados en varias secciones)
+   ------------------------------------------------------------------ */
+section{ padding:80px 0; }
+.section-head{ max-width:640px; margin-bottom:48px; }
+.section-head .kicker{ color:var(--rojo); font-weight:700; font-size:0.85rem; margin-bottom:10px; display:block; }
+.section-head h2{ font-size:2rem; font-weight:800; }
+.section-alt{ background:var(--gris-claro); } /* alterna el fondo entre blanco y gris claro */
+
+
+/* ------------------------------------------------------------------
+   5. SECCIÓN "QUIÉNES SOMOS"
+   ------------------------------------------------------------------ */
+.about-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
+.about-grid p{ color:var(--gris-medio); margin-bottom:16px; max-width:52ch; }
+
+.stat-cards{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.stat-card{
+  background:var(--negro); color:#fff; border-radius:6px; padding:22px 20px;
+  border-left:4px solid var(--rojo);
+}
+.stat-card .num{ font-family:'Archivo',sans-serif; font-size:1.9rem; font-weight:800; color:#8c8787; } /* color especial pedido por el cliente */
+.stat-card .label{ font-size:0.85rem; color:#CFCFD2; margin-top:2px; }
+
+
+/* ------------------------------------------------------------------
+   6. SECCIÓN "¿POR QUÉ ELEGIRNOS?"
+   ------------------------------------------------------------------ */
+.why-list{ display:grid; grid-template-columns:1fr 1fr; gap:20px 40px; }
+.why-item{ display:flex; gap:14px; align-items:flex-start; }
+.why-icon{
+  flex-shrink:0; width:42px; height:42px; border-radius:6px;
+  background:var(--rojo); display:flex; align-items:center; justify-content:center;
+}
+.why-icon svg{ width:20px; height:20px; stroke:#fff; }
+.why-item h4{ font-size:1rem; margin-bottom:2px; }
+.why-item p{ color:var(--gris-medio); font-size:0.92rem; }
+
+
+/* ------------------------------------------------------------------
+   7. SECCIÓN "SERVICIOS" (tarjetas con las 4 áreas)
+   ------------------------------------------------------------------ */
+.servicios-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+.servicio-card{
+  background:#fff; border:1px solid var(--linea); border-radius:8px;
+  padding:28px 22px; display:flex; flex-direction:column;
+}
+.servicio-card .icon-circle{
+  width:54px; height:54px; border-radius:50%; background:var(--rojo);
+  display:flex; align-items:center; justify-content:center; margin-bottom:18px;
+}
+/* La 4ta tarjeta (SG-SST) lleva el círculo en negro para diferenciarla */
+.servicio-card:nth-child(4) .icon-circle{ background:var(--negro); }
+.servicio-card .icon-circle svg{ width:26px; height:26px; stroke:#fff; }
+.servicio-card h3{ font-size:1.08rem; margin-bottom:14px; }
+.servicio-card ul{ list-style:none; color:var(--gris-medio); font-size:0.88rem; }
+.servicio-card li{ padding-left:16px; position:relative; margin-bottom:8px; }
+.servicio-card li::before{
+  content:""; position:absolute; left:0; top:8px;
+  width:5px; height:5px; border-radius:50%; background:var(--rojo);
+}
+
+
+/* ------------------------------------------------------------------
+   8. SECCIÓN "SECTORES QUE ATENDEMOS" + FRASE DESTACADA
+   ------------------------------------------------------------------ */
+.sectores-wrap{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:50px; align-items:center; }
+.sector-tags{ display:flex; flex-wrap:wrap; gap:10px; }
+.sector-tag{
+  border:1px solid var(--linea); border-radius:30px; padding:9px 16px;
+  font-size:0.88rem; font-weight:500; display:flex; align-items:center; gap:8px;
+}
+.sector-tag .dot{ width:6px; height:6px; border-radius:50%; background:var(--rojo); }
+.sectores-img{ border-radius:8px; overflow:hidden; }
+.sectores-img img{ width:100%; height:340px; object-fit:cover; }
+
+.quote-block{
+  background:var(--negro); color:#fff; border-radius:8px; padding:36px 40px;
+  margin-top:50px; position:relative;
+}
+.quote-block p{ font-size:1.3rem; font-weight:600; font-family:'Archivo',sans-serif; max-width:640px; }
+.quote-block .mark{ color:var(--rojo); font-size:2.6rem; line-height:0; font-family:Georgia,serif; }
+
+
+/* ------------------------------------------------------------------
+   9. SECCIÓN "COBERTURA NACIONAL"
+   ------------------------------------------------------------------ */
+.cobertura{ background:var(--negro); color:#fff; }
+.cobertura-inner{ display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; }
+.cobertura h2{ font-size:1.9rem; font-weight:800; margin-bottom:16px; }
+.cobertura p{ color:#C9C9CC; max-width:44ch; margin-bottom:22px; }
+.cobertura-badge{
+  display:inline-flex; align-items:center; gap:10px;
+  border:1px solid #46464A; padding:10px 18px; border-radius:30px; font-size:0.88rem;
+}
+.cobertura-badge .dot{ width:8px; height:8px; border-radius:50%; background:var(--rojo); }
+.map-graphic{ display:flex; align-items:center; justify-content:center; }
+
+
+/* ------------------------------------------------------------------
+   10. SECCIÓN "CONTACTO" + FORMULARIO
+   ------------------------------------------------------------------ */
+.contacto-grid{ display:grid; grid-template-columns:0.85fr 1.15fr; gap:50px; }
+
+.contact-info-card{ background:var(--gris-claro); border-radius:8px; padding:32px; }
+.contact-info-card h3{ font-size:1.2rem; margin-bottom:20px; }
+.info-line{ display:flex; gap:14px; align-items:flex-start; margin-bottom:18px; }
+.info-line .ic{
+  width:36px; height:36px; border-radius:50%; background:var(--rojo);
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+.info-line .ic svg{ width:17px; height:17px; stroke:#fff; }
+.info-line span, .info-line a{ font-size:0.92rem; color:var(--negro); font-weight:500; }
+
+.social-row{ display:flex; gap:10px; margin-top:22px; }
+.social-row a{
+  width:38px; height:38px; border-radius:50%; background:var(--negro);
+  display:flex; align-items:center; justify-content:center; transition:.2s;
+}
+.social-row a:hover{ background:var(--rojo); }
+.social-row svg{ width:17px; height:17px; stroke:#fff; }
+
+/* Formulario */
+form{ background:#fff; border:1px solid var(--linea); border-radius:8px; padding:32px; }
+.form-row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.field{ margin-bottom:18px; }
+.field label{ display:block; font-size:0.82rem; font-weight:600; margin-bottom:6px; color:var(--negro); }
+.field input, .field select, .field textarea{
+  width:100%; padding:12px 14px; border:1px solid var(--linea); border-radius:5px;
+  font-family:'Work Sans',sans-serif; font-size:0.94rem; background:#fdfdfc;
+  transition:border-color .2s;
+}
+.field input:focus, .field select:focus, .field textarea:focus{ outline:none; border-color:var(--rojo); }
+.field textarea{ resize:vertical; min-height:110px; }
+.form-note{ font-size:0.8rem; color:var(--gris-medio); margin-top:10px; }
+button[type="submit"]{ width:100%; border:none; font-family:'Work Sans',sans-serif; }
+
+/* Mensaje de estado del formulario (Enviando... / ¡Gracias! / Error) */
+.form-status{ margin-top:14px; font-size:0.88rem; font-weight:600; display:none; }
+.form-status.ok{ color:#1b7a3d; display:block; }   /* verde = éxito */
+.form-status.err{ color:var(--rojo); display:block; } /* rojo = error */
+
+
+/* ------------------------------------------------------------------
+   11. PIE DE PÁGINA (FOOTER)
+   ------------------------------------------------------------------ */
+footer{ background:var(--negro); color:#B9B9BC; padding:44px 0 24px; }
+.footer-inner{
+  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;
+  border-bottom:1px solid #303033; padding-bottom:26px; margin-bottom:20px;
+}
+.footer-inner .logo small{ color:#8A8A8E; }
+footer .fine{ font-size:0.8rem; text-align:center; color:#75757A; }
+
+
+/* ------------------------------------------------------------------
+   12. BURBUJA FLOTANTE DE WHATSAPP
+   ------------------------------------------------------------------ */
+.wa-bubble{
+  position:fixed; bottom:24px; right:24px; z-index:200;
+  width:60px; height:60px; border-radius:50%;
+  background:#25D366; /* verde oficial de WhatsApp */
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.28);
+  animation:wa-pulse 2.4s infinite; /* animación de "pulso" para llamar la atención */
+}
+.wa-bubble svg{ width:30px; height:30px; }
+@keyframes wa-pulse{
+  0%{ box-shadow:0 8px 20px rgba(0,0,0,0.28), 0 0 0 0 rgba(37,211,102,0.5); }
+  70%{ box-shadow:0 8px 20px rgba(0,0,0,0.28), 0 0 0 14px rgba(37,211,102,0); }
+  100%{ box-shadow:0 8px 20px rgba(0,0,0,0.28), 0 0 0 0 rgba(37,211,102,0); }
+}
+
+
+/* ------------------------------------------------------------------
+   13. RESPONSIVE — ajustes para tablet y celular
+   ------------------------------------------------------------------ */
+@media (max-width:900px){
+  /* Menú se convierte en lista desplegable tipo "hamburguesa" */
+  nav ul{
+    position:fixed; top:64px; left:0; right:0; background:var(--negro);
+    flex-direction:column; padding:20px 24px; gap:18px;
+    transform:translateY(-130%); transition:transform .25s; opacity:0;
+  }
+  nav ul.open{ transform:translateY(0); opacity:1; }
+  .nav-toggle{ display:block; }
+
+  .hero-inner{ grid-template-columns:1fr; }
+  .hero-figure{ order:-1; height:260px; }
+  .hero h1{ font-size:2.1rem; }
+
+  .service-strip .wrap{ grid-template-columns:repeat(2,1fr); }
+  .service-strip a{ border-bottom:1px solid rgba(255,255,255,0.25); }
+
+  .about-grid, .why-list, .sectores-wrap, .cobertura-inner, .contacto-grid{
+    grid-template-columns:1fr;
+  }
+  .servicios-grid{ grid-template-columns:1fr 1fr; }
+  .form-row{ grid-template-columns:1fr; }
+}
+
+@media (max-width:560px){
+  .servicios-grid{ grid-template-columns:1fr; }
+  .section-head h2{ font-size:1.6rem; }
+}

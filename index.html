@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JGR Soluciones Contables y Tributarias</title>
+
+<!-- ============================================================
+     FUENTES (Google Fonts)
+     - Archivo: para títulos (negrita, fuerte, tipo "corporativo")
+     - Work Sans: para texto normal (párrafos, formularios, menú)
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Hoja de estilos separada -->
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============================================================
+     MENÚ SUPERIOR (NAVBAR)
+     ============================================================ -->
+<header>
+  <div class="navbar">
+    <div class="logo">JG<span>R</span>
+      <small>SOLUCIONES CONTABLES Y TRIBUTARIAS</small>
+    </div>
+
+    <!-- Botón de menú hamburguesa (solo aparece en celular) -->
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"><span></span></button>
+
+    <nav>
+      <ul id="navMenu">
+        <li><a href="#quienes-somos">Quiénes somos</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#sectores">Sectores</a></li>
+        <li><a href="#cobertura">Cobertura</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ============================================================
+     HERO / PORTADA
+     Primer bloque grande que ve el visitante al entrar
+     ============================================================ -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <div class="eyebrow-line"><span class="dot"></span> Cobertura nacional · Presencial y virtual</div>
+      <h1>Soluciones contables, administrativas, gestión humana y <em>seguridad y salud en el trabajo</em></h1>
+      <p class="lead">Soluciones integrales para el crecimiento y la sostenibilidad de su empresa, con atención personalizada en todo el territorio colombiano.</p>
+      <div class="btn-row">
+        <a href="#contacto" class="btn btn-primary">Solicitar asesoría</a>
+        <!-- Botón directo a WhatsApp -->
+        <a href="https://wa.me/573148702091" target="_blank" class="btn btn-outline">Escribir por WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-figure">
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&q=80" alt="Asesores de JGR trabajando con un cliente">
+    </div>
+  </div>
+
+  <!-- Franja roja con los 4 servicios principales -->
+  <div class="service-strip">
+    <div class="wrap">
+      <a href="#servicios">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 20h18M6 20V10M12 20V4M18 20v13"/></svg>
+        Contabilidad
+      </a>
+      <a href="#servicios">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+        Administración
+      </a>
+      <a href="#servicios">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2"/><path d="M17 8a3 3 0 1 1 0-6"/></svg>
+        Gestión Humana
+      </a>
+      <a href="#servicios">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2 3 6v6c0 5 4 8 9 10 5-2 9-5 9-10V6l-9-4Z"/></svg>
+        SST
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     QUIÉNES SOMOS
+     ============================================================ -->
+<section id="quienes-somos">
+  <div class="wrap about-grid">
+    <div>
+      <span class="kicker">Quiénes somos</span>
+      <h2 style="margin-bottom:18px;">Su aliado estratégico en cada paso de su crecimiento</h2>
+      <p>Somos una firma de consultoría y asesoría empresarial, con un equipo de profesionales altamente calificados y comprometidos con brindar soluciones integrales en las áreas contable, administrativa, gestión humana y seguridad y salud en el trabajo.</p>
+      <p>Nuestro compromiso es ofrecer un servicio confiable, oportuno y de calidad, generando valor y contribuyendo al cumplimiento de los objetivos de nuestros clientes.</p>
+    </div>
+    <div class="stat-cards">
+      <div class="stat-card"><div class="num">+100</div><div class="label">Clientes satisfechos</div></div>
+      <div class="stat-card"><div class="num">+10</div><div class="label">Años de experiencia</div></div>
+      <div class="stat-card"><div class="num">32</div><div class="label">Departamentos con cobertura</div></div>
+      <div class="stat-card"><div class="num">24/7</div><div class="label">Atención personalizada</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ¿POR QUÉ ELEGIRNOS?
+     ============================================================ -->
+<section class="section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">¿Por qué elegirnos?</span>
+      <h2>Razones para confiar en JGR</h2>
+    </div>
+    <div class="why-list">
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg></div>
+        <div><h4>Atención personalizada</h4><p>Acompañamiento cercano y a la medida de cada cliente.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2 3 6v6c0 5 4 8 9 10 5-2 9-5 9-10V6l-9-4Z"/></svg></div>
+        <div><h4>Cobertura a nivel nacional</h4><p>Servicio presencial y virtual en todo el país.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m22 4-10 10-3-3"/></svg></div>
+        <div><h4>Profesionales especializados</h4><p>Equipo calificado en cada área de servicio.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div><h4>Cumplimiento normativo</h4><p>Procesos alineados a la normatividad vigente.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div><h4>Acompañamiento permanente</h4><p>Seguimiento continuo a cada proceso de su empresa.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="16" r="1.5"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div><h4>Confidencialidad y ética</h4><p>Manejo responsable y reservado de su información.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICIOS (detalle completo de las 4 áreas)
+     ============================================================ -->
+<section id="servicios">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Nuestros servicios</span>
+      <h2>Soluciones integrales para su empresa</h2>
+    </div>
+    <div class="servicios-grid">
+
+      <div class="servicio-card">
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 20h18M6 20V10M12 20V4M18 20v13"/></svg></div>
+        <h3>Contabilidad y tributaria</h3>
+        <ul>
+          <li>Contabilidad para personas naturales y jurídicas</li>
+          <li>Elaboración de estados financieros</li>
+          <li>Declaraciones de renta</li>
+          <li>Declaraciones de IVA, Retención en la Fuente e ICA</li>
+          <li>Información Exógena DIAN</li>
+          <li>Facturación electrónica</li>
+          <li>Nómina electrónica</li>
+          <li>Planeación tributaria</li>
+          <li>Auditoría y revisoría fiscal</li>
+          <li>Asesoría contable permanente</li>
+        </ul>
+      </div>
+
+      <div class="servicio-card">
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+        <h3>Servicios administrativos</h3>
+        <ul>
+          <li>Constitución y formalización de empresas</li>
+          <li>Organización y fortalecimiento administrativo</li>
+          <li>Elaboración de manuales de procesos y funciones</li>
+          <li>Diseño de indicadores de gestión</li>
+          <li>Implementación de control interno</li>
+          <li>Asesoría en gestión documental</li>
+          <li>Planeación estratégica empresarial</li>
+        </ul>
+      </div>
+
+      <div class="servicio-card">
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2"/><path d="M17 8a3 3 0 1 1 0-6"/></svg></div>
+        <h3>Gestión humana</h3>
+        <ul>
+          <li>Administración de nómina</li>
+          <li>Elaboración de contratos laborales</li>
+          <li>Liquidaciones de prestaciones sociales</li>
+          <li>Liquidaciones de contratos</li>
+          <li>Procesos de selección de personal</li>
+          <li>Manuales de funciones</li>
+          <li>Reglamento Interno de Trabajo</li>
+          <li>Capacitación y desarrollo del talento humano</li>
+        </ul>
+      </div>
+
+      <div class="servicio-card">
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2 3 6v6c0 5 4 8 9 10 5-2 9-5 9-10V6l-9-4Z"/></svg></div>
+        <h3>Seguridad y salud en el trabajo (SG-SST)</h3>
+        <ul>
+          <li>Diseño e implementación del SG-SST</li>
+          <li>Actualización y mantenimiento del sistema</li>
+          <li>Matriz de peligros y valoración de riesgos</li>
+          <li>Plan Anual de Trabajo</li>
+          <li>Capacitaciones obligatorias</li>
+          <li>Investigación de accidentes e incidentes laborales</li>
+          <li>Auditorías internas</li>
+          <li>Preparación para visitas del Ministerio del Trabajo y la ARL</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTORES QUE ATENDEMOS + FRASE DESTACADA
+     ============================================================ -->
+<section id="sectores" class="section-alt">
+  <div class="wrap">
+    <div class="sectores-wrap">
+      <div>
+        <span class="kicker">Sectores que atendemos</span>
+        <h2 style="margin-bottom:22px;">Experiencia en múltiples industrias</h2>
+        <div class="sector-tags">
+          <span class="sector-tag"><span class="dot"></span>Comercio</span>
+          <span class="sector-tag"><span class="dot"></span>Industria</span>
+          <span class="sector-tag"><span class="dot"></span>Construcción</span>
+          <span class="sector-tag"><span class="dot"></span>Salud</span>
+          <span class="sector-tag"><span class="dot"></span>Clínicas veterinarias</span>
+          <span class="sector-tag"><span class="dot"></span>Transporte</span>
+          <span class="sector-tag"><span class="dot"></span>Servicios</span>
+          <span class="sector-tag"><span class="dot"></span>Tecnología</span>
+          <span class="sector-tag"><span class="dot"></span>Profesionales independientes</span>
+          <span class="sector-tag"><span class="dot"></span>Propiedad horizontal</span>
+          <span class="sector-tag"><span class="dot"></span>Empresas del sector público y privado</span>
+        </div>
+      </div>
+      <div class="sectores-img">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=80" alt="Profesionales de distintos sectores atendidos por JGR">
+      </div>
+    </div>
+
+    <div class="quote-block">
+      <span class="mark">&ldquo;</span>
+      <p>Más que un servicio, somos su aliado estratégico en cada paso de su crecimiento.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     COBERTURA NACIONAL
+     ============================================================ -->
+<section id="cobertura" class="cobertura">
+  <div class="wrap cobertura-inner">
+    <div>
+      <h2>Cobertura nacional</h2>
+      <p>Prestamos nuestros servicios en todo el territorio colombiano de manera presencial y virtual, con la misma calidad y compromiso en cada región.</p>
+      <div class="cobertura-badge"><span class="dot"></span> Colombia — cobertura nacional</div>
+    </div>
+    <div class="map-graphic">
+      <svg width="280" height="280" viewBox="0 0 280 280">
+        <circle cx="140" cy="140" r="130" fill="none" stroke="#3A3A3E" stroke-width="1"/>
+        <circle cx="140" cy="140" r="90" fill="none" stroke="#3A3A3E" stroke-width="1"/>
+        <circle cx="140" cy="140" r="50" fill="none" stroke="#3A3A3E" stroke-width="1"/>
+        <circle cx="140" cy="140" r="6" fill="#C8202E"/>
+        <circle cx="90" cy="90" r="4" fill="#C8202E"/>
+        <circle cx="190" cy="100" r="4" fill="#C8202E"/>
+        <circle cx="100" cy="190" r="4" fill="#C8202E"/>
+        <circle cx="200" cy="190" r="4" fill="#C8202E"/>
+        <circle cx="140" cy="60" r="4" fill="#C8202E"/>
+        <circle cx="140" cy="220" r="4" fill="#C8202E"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACTO + FORMULARIO
+     El formulario envía los datos a FormSubmit.co, que los
+     reenvía por correo a jgrsolucionesct@gmail.com
+     (ver js/script.js para el envío sin recargar la página)
+     ============================================================ -->
+<section id="contacto">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Contacto</span>
+      <h2>Cuéntenos sobre su empresa</h2>
+    </div>
+    <div class="contacto-grid">
+
+      <div class="contact-info-card">
+        <h3>Información de contacto</h3>
+        <div class="info-line">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <a href="tel:+573148702091">314 870 2091</a>
+        </div>
+        <div class="info-line">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 4 8 9 8-9"/></svg></div>
+          <a href="mailto:jgrsolucionesct@gmail.com">jgrsolucionesct@gmail.com</a>
+        </div>
+        <div class="info-line">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <span>Colombia — Cobertura nacional</span>
+        </div>
+        <div class="info-line">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/></svg></div>
+          <span>www.jgrsoluciones.com</span>
+        </div>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="#fff"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="https://wa.me/573148702091" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.62 1.4 5.13L2 22l5.13-1.49a9.9 9.9 0 0 0 4.91 1.3h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm5.79 14.14c-.24.68-1.4 1.3-1.94 1.36-.5.06-1.13.09-1.83-.11-.42-.12-.96-.31-1.65-.6-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.28.58-.35.78-.35h.55c.18 0 .42-.07.65.5.24.6.82 2.05.89 2.2.07.14.12.31.02.5-.1.19-.15.31-.29.47-.14.16-.3.36-.43.48-.14.14-.29.29-.13.57.17.28.75 1.24 1.62 2 1.11.99 2.05 1.3 2.33 1.44.28.14.44.12.6-.07.17-.19.72-.84.91-1.13.19-.28.38-.24.64-.14.27.09 1.7.8 1.99.95.29.14.48.21.55.33.07.13.07.71-.17 1.39z"/></svg></a>
+        </div>
+      </div>
+
+      <!--
+        FORMULARIO DE CONTACTO
+        - action: a dónde se envían los datos (FormSubmit.co)
+        - _subject: asunto del correo que llega
+        - _captcha "false": desactiva el captcha de FormSubmit
+        - _template "table": el correo llega ordenado en tabla
+        El envío real (sin recargar la página) lo maneja js/script.js
+      -->
+      <form id="jgrForm" action="https://formsubmit.co/jgrsolucionesct@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nueva solicitud desde la página web de JGR">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="form-row">
+          <div class="field">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="Nombre" required placeholder="Su nombre">
+          </div>
+          <div class="field">
+            <label for="empresa">Empresa</label>
+            <input type="text" id="empresa" name="Empresa" placeholder="Nombre de su empresa">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="Teléfono" required placeholder="Ej: 300 000 0000">
+          </div>
+          <div class="field">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="Correo" required placeholder="correo@ejemplo.com">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="servicio">Servicio de interés</label>
+          <select id="servicio" name="Servicio de interés">
+            <option>Contabilidad y tributaria</option>
+            <option>Servicios administrativos</option>
+            <option>Gestión humana</option>
+            <option>Seguridad y salud en el trabajo (SG-SST)</option>
+            <option>Varios servicios / no estoy seguro</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="mensaje">Cuéntenos qué necesita</label>
+          <textarea id="mensaje" name="Mensaje" placeholder="Escriba brevemente su necesidad..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+
+        <!-- Aquí se muestra "Enviando...", "¡Gracias!" o el mensaje de error -->
+        <p id="formStatus" class="form-status"></p>
+
+        <p class="form-note">Al enviar este formulario, su información llegará directamente al correo de JGR Soluciones Contables y Tributarias.</p>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PIE DE PÁGINA
+     ============================================================ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="logo">JG<span>R</span><small>SOLUCIONES CONTABLES Y TRIBUTARIAS</small></div>
+      <div class="btn-row">
+        <a href="https://wa.me/573148702091" target="_blank" class="btn btn-outline" style="padding:10px 20px;">WhatsApp</a>
+        <a href="mailto:jgrsolucionesct@gmail.com" class="btn btn-outline" style="padding:10px 20px;">Escribir correo</a>
+      </div>
+    </div>
+    <p class="fine">© 2026 JGR Soluciones Contables y Tributarias. Todos los derechos reservados. Colombia — Cobertura nacional.</p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     BURBUJA FLOTANTE DE WHATSAPP
+     Visible en todas las secciones, abre un chat directo
+     al número de JGR con un mensaje precargado
+     ============================================================ -->
+<a class="wa-bubble" href="https://wa.me/573148702091?text=Hola%2C%20estoy%20interesado%20en%20los%20servicios%20de%20JGR%20Soluciones%20Contables%20y%20Tributarias" target="_blank" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.62 1.4 5.13L2 22l5.13-1.49a9.9 9.9 0 0 0 4.91 1.3h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm5.79 14.14c-.24.68-1.4 1.3-1.94 1.36-.5.06-1.13.09-1.83-.11-.42-.12-.96-.31-1.65-.6-2.9-1.25-4.8-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.28.58-.35.78-.35h.55c.18 0 .42-.07.65.5.24.6.82 2.05.89 2.2.07.14.12.31.02.5-.1.19-.15.31-.29.47-.14.16-.3.36-.43.48-.14.14-.29.29-.13.57.17.28.75 1.24 1.62 2 1.11.99 2.05 1.3 2.33 1.44.28.14.44.12.6-.07.17-.19.72-.84.91-1.13.19-.28.38-.24.64-.14.27.09 1.7.8 1.99.95.29.14.48.21.55.33.07.13.07.71-.17 1.39z"/></svg>
+</a>
+
+<!-- Script separado: menú móvil + envío del formulario -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
