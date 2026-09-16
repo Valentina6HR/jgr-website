@@ -1,5 +1,5 @@
 /* ==================================================================
-   JGR SOLUCIONES CONTABLES Y TRIBUTARIAS — HOJA DE ESTILOS
+   G&A GESTIÓN INTEGRAL S.A.S. — HOJA DE ESTILOS
    ------------------------------------------------------------------
    Índice del archivo:
    1. Variables de color y reset general
@@ -7,14 +7,17 @@
    3. Menú superior (header / navbar)
    4. Hero / portada
    5. Sección "Quiénes somos"
-   6. Sección "¿Por qué elegirnos?"
+   6. Sección "¿Por qué G&A?"
    7. Sección "Servicios"
    8. Sección "Sectores que atendemos"
-   9. Sección "Cobertura nacional"
+   9. Sección "Cobertura / Ubicación"
    10. Sección "Contacto" + formulario
    11. Pie de página (footer)
    12. Burbuja de WhatsApp
    13. Responsive (celular / tablet)
+   14. Sección "Nuestro equipo"
+   15. Sección "Nuestra metodología"
+   16. Sección "Modalidad"
 
    CÓMO CAMBIAR LOS COLORES:
    Solo hay que editar los valores dentro de :root en la sección 1.
@@ -27,9 +30,9 @@
    1. VARIABLES DE COLOR Y RESET GENERAL
    ------------------------------------------------------------------ */
 :root{
-  --rojo:#7a4040;          /* Rojo principal de la marca (ajustado por el cliente) */
+  --rojo:#7a4040;          /* Rojo principal de la marca */
   --rojo-oscuro:#9E1620;   /* Rojo para estados "hover" (al pasar el mouse) */
-  --negro:#433b3b;         /* Negro/casi negro usado en fondos oscuros y textos (ajustado por el cliente) */
+  --negro:#433b3b;         /* Negro/casi negro usado en fondos oscuros y textos */
   --gris-panel:#2B2B2E;    /* Gris oscuro auxiliar */
   --gris-claro:#F4F3F1;    /* Fondo gris claro para alternar secciones */
   --gris-medio:#6B6B6E;    /* Gris para texto secundario/párrafos */
@@ -66,7 +69,7 @@ img{ max-width:100%; display:block; }
    ------------------------------------------------------------------ */
 header{
   position:sticky; top:0; z-index:100; /* se queda fijo arriba al hacer scroll */
-  background:#7a4040; /* fondo sólido en rojo (pedido por el cliente) */
+  background:#7a4040;
   backdrop-filter:blur(6px);
 }
 .navbar{
@@ -77,10 +80,14 @@ header{
   display:flex; align-items:center; gap:10px;
   color:var(--blanco); font-weight:900; font-size:1.5rem;
 }
-.logo span{ color:var(--rojo); } /* la "R" de JGR en rojo */
+.logo span{ color:var(--rojo); } /* acentos en rojo dentro del texto del logo */
 .logo small{
   display:block; font-family:'Work Sans',sans-serif; font-weight:500;
   font-size:0.55rem; letter-spacing:0.08em; color:#B9B9BC; margin-top:-2px;
+}
+/* Logo como imagen (arriba a la izquierda) en vez de texto */
+.logo-img{
+  height:42px; width:auto; border-radius:6px; background:#fff; padding:2px;
 }
 nav ul{ display:flex; gap:30px; list-style:none; }
 nav a{ color:#E7E7E9; font-size:0.92rem; font-weight:500; transition:color .2s; }
@@ -123,7 +130,7 @@ nav a:hover{ color:var(--rojo); }
 }
 .eyebrow-line .dot{ width:8px; height:8px; border-radius:50%; background:var(--rojo); }
 .hero h1{ font-size:2.7rem; font-weight:800; color:var(--blanco); margin-bottom:20px; }
-.hero h1 em{ font-style:normal; color:#f65e68; } /* color especial para "seguridad y salud en el trabajo" (pedido por el cliente) */
+.hero h1 em{ font-style:normal; color:#f65e68; }
 .hero p.lead{ font-size:1.08rem; color:#C9C9CC; max-width:480px; margin-bottom:32px; }
 
 .btn-row{ display:flex; gap:14px; flex-wrap:wrap; }
@@ -140,9 +147,9 @@ nav a:hover{ color:var(--rojo); }
 .hero-figure{ position:relative; border-radius:6px; overflow:hidden; border:1px solid #38383C; }
 .hero-figure img{ width:100%; height:100%; object-fit:cover; display:block; }
 
-/* Franja roja con los 4 servicios (Contabilidad, Administración, Gestión Humana, SST) */
+/* Franja roja con los 5 servicios (Contabilidad, Gestión Administrativa, Estrategia, Optimización, SST) */
 .service-strip{ background:var(--rojo); margin-top:60px; }
-.service-strip .wrap{ display:grid; grid-template-columns:repeat(4,1fr); }
+.service-strip .wrap{ display:grid; grid-template-columns:repeat(5,1fr); }
 .service-strip a{
   display:flex; flex-direction:column; align-items:center; gap:8px;
   padding:20px 10px; color:#fff; font-weight:600; font-size:0.92rem;
@@ -175,12 +182,12 @@ section{ padding:80px 0; }
   background:var(--negro); color:#fff; border-radius:6px; padding:22px 20px;
   border-left:4px solid var(--rojo);
 }
-.stat-card .num{ font-family:'Archivo',sans-serif; font-size:1.9rem; font-weight:800; color:#8c8787; } /* color especial pedido por el cliente */
+.stat-card .num{ font-family:'Archivo',sans-serif; font-size:1.9rem; font-weight:800; color:#8c8787; }
 .stat-card .label{ font-size:0.85rem; color:#CFCFD2; margin-top:2px; }
 
 
 /* ------------------------------------------------------------------
-   6. SECCIÓN "¿POR QUÉ ELEGIRNOS?"
+   6. SECCIÓN "¿POR QUÉ G&A?"
    ------------------------------------------------------------------ */
 .why-list{ display:grid; grid-template-columns:1fr 1fr; gap:20px 40px; }
 .why-item{ display:flex; gap:14px; align-items:flex-start; }
@@ -194,9 +201,9 @@ section{ padding:80px 0; }
 
 
 /* ------------------------------------------------------------------
-   7. SECCIÓN "SERVICIOS" (tarjetas con las 4 áreas)
+   7. SECCIÓN "SERVICIOS" (5 áreas)
    ------------------------------------------------------------------ */
-.servicios-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+.servicios-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:20px; }
 .servicio-card{
   background:#fff; border:1px solid var(--linea); border-radius:8px;
   padding:28px 22px; display:flex; flex-direction:column;
@@ -205,10 +212,11 @@ section{ padding:80px 0; }
   width:54px; height:54px; border-radius:50%; background:var(--rojo);
   display:flex; align-items:center; justify-content:center; margin-bottom:18px;
 }
-/* La 4ta tarjeta (SG-SST) lleva el círculo en negro para diferenciarla */
-.servicio-card:nth-child(4) .icon-circle{ background:var(--negro); }
+/* La 5ta tarjeta (SG-SST) lleva el círculo en negro para diferenciarla */
+.servicio-card:nth-child(5) .icon-circle{ background:var(--negro); }
 .servicio-card .icon-circle svg{ width:26px; height:26px; stroke:#fff; }
 .servicio-card h3{ font-size:1.08rem; margin-bottom:14px; }
+.servicio-card p{ color:var(--gris-medio); font-size:0.9rem; }
 .servicio-card ul{ list-style:none; color:var(--gris-medio); font-size:0.88rem; }
 .servicio-card li{ padding-left:16px; position:relative; margin-bottom:8px; }
 .servicio-card li::before{
@@ -239,7 +247,7 @@ section{ padding:80px 0; }
 
 
 /* ------------------------------------------------------------------
-   9. SECCIÓN "COBERTURA NACIONAL"
+   9. SECCIÓN "COBERTURA / UBICACIÓN"
    ------------------------------------------------------------------ */
 .cobertura{ background:var(--negro); color:#fff; }
 .cobertura-inner{ display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; }
@@ -329,6 +337,54 @@ footer .fine{ font-size:0.8rem; text-align:center; color:#75757A; }
 
 
 /* ------------------------------------------------------------------
+   14. SECCIÓN "NUESTRO EQUIPO"
+   ------------------------------------------------------------------ */
+.team-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
+.team-card{
+  background:var(--negro); color:#fff; border-radius:10px; padding:32px 24px;
+  text-align:center;
+}
+.team-card img{
+  width:120px; height:120px; border-radius:50%; object-fit:cover;
+  margin:0 auto 18px; border:3px solid var(--rojo);
+}
+.team-card h4{ font-size:1.1rem; margin-bottom:4px; }
+.team-card p{ color:#CFCFD2; font-size:0.88rem; }
+
+
+/* ------------------------------------------------------------------
+   15. SECCIÓN "NUESTRA METODOLOGÍA"
+   ------------------------------------------------------------------ */
+.method-steps{
+  display:grid; grid-template-columns:repeat(5,1fr); gap:16px; text-align:center;
+}
+.method-step{
+  background:var(--gris-claro); border-radius:10px; padding:24px 14px;
+  position:relative;
+}
+.method-step .step-num{
+  width:36px; height:36px; border-radius:50%; background:var(--rojo); color:#fff;
+  display:flex; align-items:center; justify-content:center; font-weight:800;
+  margin:0 auto 12px;
+}
+.method-step span.label{ font-weight:600; font-size:0.92rem; }
+
+
+/* ------------------------------------------------------------------
+   16. SECCIÓN "MODALIDAD"
+   ------------------------------------------------------------------ */
+.modality-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.modality-card{
+  border:1px solid var(--linea); border-radius:10px; padding:28px 22px; text-align:center;
+}
+.modality-card .modality-badge{
+  display:inline-block; background:var(--rojo); color:#fff; font-weight:700;
+  padding:8px 18px; border-radius:30px; font-size:0.9rem; margin-bottom:14px;
+}
+.modality-card p{ color:var(--gris-medio); font-size:0.92rem; }
+
+
+/* ------------------------------------------------------------------
    13. RESPONSIVE — ajustes para tablet y celular
    ------------------------------------------------------------------ */
 @media (max-width:900px){
@@ -346,6 +402,7 @@ footer .fine{ font-size:0.8rem; text-align:center; color:#75757A; }
   .hero h1{ font-size:2.1rem; }
 
   .service-strip .wrap{ grid-template-columns:repeat(2,1fr); }
+  .service-strip a:nth-child(5){ grid-column:span 2; }
   .service-strip a{ border-bottom:1px solid rgba(255,255,255,0.25); }
 
   .about-grid, .why-list, .sectores-wrap, .cobertura-inner, .contacto-grid{
@@ -353,9 +410,14 @@ footer .fine{ font-size:0.8rem; text-align:center; color:#75757A; }
   }
   .servicios-grid{ grid-template-columns:1fr 1fr; }
   .form-row{ grid-template-columns:1fr; }
+
+  .team-grid{ grid-template-columns:1fr; }
+  .method-steps{ grid-template-columns:repeat(2,1fr); }
+  .modality-grid{ grid-template-columns:1fr; }
 }
 
 @media (max-width:560px){
   .servicios-grid{ grid-template-columns:1fr; }
   .section-head h2{ font-size:1.6rem; }
+  .method-steps{ grid-template-columns:1fr; }
 }
