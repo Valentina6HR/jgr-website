@@ -92,7 +92,7 @@ header{
 }
 nav ul{ display:flex; gap:30px; list-style:none; }
 nav a{ color:#E7E7E9; font-size:0.92rem; font-weight:500; transition:color .2s; position:relative; }
-nav a:hover{ color:var(--rojo); }
+nav a:hover{ color: #fff; }
 
 /* Botón hamburguesa (solo visible en celular, ver sección responsive) */
 .nav-toggle{ display:none; background:none; border:none; cursor:pointer; }
@@ -480,8 +480,9 @@ footer .fine{ font-size:0.8rem; text-align:center; color:#75757A; }
 .btn-outline:hover{ box-shadow:0 10px 20px rgba(0,0,0,0.15); }
 
 /* Subrayado elegante y sutil en los links del menú al pasar el mouse */
+/* Subrayado elegante y sutil en los links del menú al pasar el mouse */
 nav a::after{
-  content:""; position:absolute; left:0; bottom:-4px; width:0; height:2px;
-  background:var(--rojo); transition:width .25s ease;
+  content:""; position:absolute; left:0; bottom:-6px; width:0; height:2px;
+  background:#ffffff; transition:width .25s ease;
 }
 nav a:hover::after{ width:100%; }
