@@ -18,6 +18,7 @@
    14. Sección "Nuestro equipo"
    15. Sección "Nuestra metodología"
    16. Sección "Modalidad"
+   17. Animaciones sutiles
 
    CÓMO CAMBIAR LOS COLORES:
    Solo hay que editar los valores dentro de :root en la sección 1.
@@ -90,7 +91,7 @@ header{
   height:62px; width:auto; border-radius:6px; background:#fff; padding:3px;
 }
 nav ul{ display:flex; gap:30px; list-style:none; }
-nav a{ color:#E7E7E9; font-size:0.92rem; font-weight:500; transition:color .2s; }
+nav a{ color:#E7E7E9; font-size:0.92rem; font-weight:500; transition:color .2s; position:relative; }
 nav a:hover{ color:var(--rojo); }
 
 /* Botón hamburguesa (solo visible en celular, ver sección responsive) */
@@ -137,7 +138,8 @@ nav a:hover{ color:var(--rojo); }
 .btn{
   display:inline-flex; align-items:center; gap:8px;
   padding:14px 26px; border-radius:4px; font-weight:600; font-size:0.95rem;
-  cursor:pointer; border:2px solid transparent; transition:.2s;
+  cursor:pointer; border:2px solid transparent;
+  transition:background .2s, border-color .2s, color .2s, transform .2s, box-shadow .2s;
 }
 .btn-primary{ background:var(--rojo); color:#fff; }
 .btn-primary:hover{ background:var(--rojo-oscuro); }
@@ -201,9 +203,9 @@ section{ padding:80px 0; }
 
 
 /* ------------------------------------------------------------------
-   7. SECCIÓN "SERVICIOS" (5 áreas)
+   7. SECCIÓN "SERVICIOS" (6 áreas, cuadrícula simétrica 3x2)
    ------------------------------------------------------------------ */
-.servicios-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:20px; }
+.servicios-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
 .servicio-card{
   background:#fff; border:1px solid var(--linea); border-radius:8px;
   padding:28px 22px; display:flex; flex-direction:column;
@@ -212,8 +214,8 @@ section{ padding:80px 0; }
   width:54px; height:54px; border-radius:50%; background:var(--rojo);
   display:flex; align-items:center; justify-content:center; margin-bottom:18px;
 }
-/* La 5ta tarjeta (SG-SST) lleva el círculo en negro para diferenciarla */
-.servicio-card:nth-child(5) .icon-circle{ background:var(--negro); }
+/* El círculo de SG-SST se marca directamente con esta clase, sin depender del orden */
+.icon-circle-dark{ background:var(--negro); }
 .servicio-card .icon-circle svg{ width:26px; height:26px; stroke:#fff; }
 .servicio-card h3{ font-size:1.08rem; margin-bottom:14px; }
 .servicio-card p{ color:var(--gris-medio); font-size:0.9rem; }
@@ -335,7 +337,9 @@ footer .fine{ font-size:0.8rem; text-align:center; color:#75757A; }
   display:flex; align-items:center; justify-content:center;
   box-shadow:0 8px 20px rgba(0,0,0,0.28);
   animation:wa-pulse 2.4s infinite; /* animación de "pulso" para llamar la atención */
+  transition:transform .25s ease;
 }
+.wa-bubble:hover{ transform:scale(1.08); }
 .wa-bubble svg{ width:30px; height:30px; }
 @keyframes wa-pulse{
   0%{ box-shadow:0 8px 20px rgba(0,0,0,0.28), 0 0 0 0 rgba(37,211,102,0.5); }
@@ -430,3 +434,54 @@ footer .fine{ font-size:0.8rem; text-align:center; color:#75757A; }
   .section-head h2{ font-size:1.6rem; }
   .method-steps{ grid-template-columns:1fr; }
 }
+
+
+/* ------------------------------------------------------------------
+   17. ANIMACIONES SUTILES (hover en tarjetas, botones e íconos)
+   ------------------------------------------------------------------ */
+
+/* Entrada suave del contenido del hero al cargar la página */
+@keyframes fadeInUp{
+  from{ opacity:0; transform:translateY(16px); }
+  to{ opacity:1; transform:translateY(0); }
+}
+.hero-inner > div:first-child{ animation:fadeInUp 0.7s ease both; }
+.hero-figure{ animation:fadeInUp 0.7s ease 0.15s both; }
+
+/* Tarjetas: leve elevación y sombra elegante al pasar el mouse */
+.servicio-card, .why-item, .team-card, .modality-card, .method-step, .stat-card{
+  transition:transform .35s ease, box-shadow .35s ease;
+}
+.servicio-card:hover, .modality-card:hover, .method-step:hover{
+  transform:translateY(-6px);
+  box-shadow:0 14px 30px rgba(67,59,59,0.12);
+}
+.team-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 14px 30px rgba(0,0,0,0.25);
+}
+.why-item:hover{ transform:translateY(-3px); }
+.stat-card:hover{ transform:translateY(-3px); box-shadow:0 10px 24px rgba(0,0,0,0.2); }
+
+/* Íconos: crecen levemente dentro de su círculo al pasar el mouse por la tarjeta */
+.servicio-card .icon-circle, .why-icon, .team-card img, .method-step .step-num{
+  transition:transform .3s ease;
+}
+.servicio-card:hover .icon-circle,
+.why-item:hover .why-icon,
+.method-step:hover .step-num{
+  transform:scale(1.08);
+}
+.team-card:hover img{ transform:scale(1.05); }
+
+/* Botones: leve elevación al pasar el mouse, sin cambiar sus colores */
+.btn:hover{ transform:translateY(-2px); }
+.btn-primary:hover{ box-shadow:0 10px 20px rgba(122,64,64,0.35); }
+.btn-outline:hover{ box-shadow:0 10px 20px rgba(0,0,0,0.15); }
+
+/* Subrayado elegante y sutil en los links del menú al pasar el mouse */
+nav a::after{
+  content:""; position:absolute; left:0; bottom:-4px; width:0; height:2px;
+  background:var(--rojo); transition:width .25s ease;
+}
+nav a:hover::after{ width:100%; }
