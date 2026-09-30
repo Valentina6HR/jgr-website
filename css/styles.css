@@ -151,8 +151,7 @@ nav a:hover{ color: #fff; }
 
 /* Franja roja con los 5 servicios (Contabilidad, Gestión Administrativa, Estrategia, Optimización, SST) */
 .service-strip{ background:var(--rojo); margin-top:60px; }
-.service-strip .wrap{ display:grid; grid-template-columns:repeat(5,1fr); }
-.service-strip a{
+.service-strip .wrap{ display:grid; grid-template-columns:repeat(6,1fr); }.service-strip a{
   display:flex; flex-direction:column; align-items:center; gap:8px;
   padding:20px 10px; color:#fff; font-weight:600; font-size:0.92rem;
   border-right:1px solid rgba(255,255,255,0.25);
@@ -414,7 +413,6 @@ footer .fine{ font-size:0.8rem; text-align:center; color:#75757A; }
   .hero h1{ font-size:2.1rem; }
 
   .service-strip .wrap{ grid-template-columns:repeat(2,1fr); }
-  .service-strip a:nth-child(5){ grid-column:span 2; }
   .service-strip a{ border-bottom:1px solid rgba(255,255,255,0.25); }
 
   .about-grid, .why-list, .sectores-wrap, .contacto-grid{
